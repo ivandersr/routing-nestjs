@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import {
   DirectionsRequest,
   Client as GoogleMapsClient,
+  Language,
   TravelMode,
 } from '@googlemaps/google-maps-services-js';
 
@@ -20,6 +21,7 @@ export class DirectionsService {
       destination: `place_id:${destinationId}`,
       mode: TravelMode.driving,
       key: this.configService.get('GOOGLE_API_KEY'),
+      language: Language.pt_BR,
     };
 
     const { data } = await this.googleMapsClient.directions({

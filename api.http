@@ -1,13 +1,13 @@
-GET http://localhost:3000/places?text=Avenida amapá, 54, cianorte pr
+GET http://localhost:3001/places?text=Avenida amapá, 54, cianorte pr
 
 ###
 @originId=ChIJZYCE48hT7ZQRkPQk2tppNcA
 @destinationId=ChIJI_2qzatQ7ZQRVxRntvK32U8
 ###
-GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
+GET http://localhost:3001/directions?originId={{originId}}&destinationId={{destinationId}}
 
 ###
-POST http://localhost:3000/routes
+POST http://localhost:3001/routes
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/routes
+GET http://localhost:3001/routes
 
 ###
-GET http://localhost:3000/routes/675727898d5be95228a4d7ff
+GET http://localhost:3001/routes/675727898d5be95228a4d7ff

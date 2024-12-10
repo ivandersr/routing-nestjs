@@ -21,6 +21,6 @@ export class PlacesService {
       },
     });
 
-    console.log(data);
+    return data;
   }
 }
