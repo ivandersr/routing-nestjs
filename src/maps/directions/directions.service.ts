@@ -15,7 +15,6 @@ export class DirectionsService {
   ) {}
 
   async getDirections(originId: string, destinationId: string) {
-    console.log(originId, destinationId);
     const requestParams: DirectionsRequest['params'] = {
       origin: `place_id:${originId}`,
       destination: `place_id:${destinationId}`,
@@ -27,8 +26,6 @@ export class DirectionsService {
     const { data } = await this.googleMapsClient.directions({
       params: requestParams,
     });
-
-    console.log(data);
 
     return {
       ...data,
